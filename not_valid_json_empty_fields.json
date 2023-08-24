@@ -1,0 +1,59 @@
+{
+    "count": 1761,
+    "items": [
+        {
+            "author": null,
+            "companyId": [],
+            "id": "fake4f16300296d20ef9b909dc0d354fb",
+            "indicators": [
+                {
+                    "dateFirstSeen": "2020-09-30T11:03:52+00:00",
+                    "dateLastSeen": "2020-09-30T11:03:52+00:00",
+                    "deleted": false,
+                    "description": null,
+                    "domain": "fake-fakesop.net",
+                    "id": "fakebe483bb82759fbee7038235e0f52d0"
+                }
+            ],
+            "indicatorsIds": [
+                "fakebe483bb82759fbee7038235e0f52d0"
+            ],
+            "isPublished": true,
+            "isTailored": false,
+            "labels": [],
+            "langs": [
+                "en"
+            ],
+            "malwareList": ["Lockbit"],
+            "seqUpdate": 1617292803402
+        },
+        {
+            "author": null,
+            "companyId": [],
+            "id": "fake4f16300296d20ef9b909dc0d354fb",
+            "indicators": [
+                {
+                    "dateFirstSeen": "2020-09-30T11:03:52+00:00",
+                    "dateLastSeen": "2020-09-30T11:03:52+00:00",
+                    "deleted": false,
+                    "description": null,
+                    "domain": "fake-fakesop.net",
+                    "id": "fakebe483bb82759fbee7038235e0f52d0"
+
+                }
+            ],
+            "indicatorsIds": [
+                "fakebe483bb82759fbee7038235e0f52d0"
+            ],
+            "isPublished": true,
+            "isTailored": false,
+            "labels": [],
+            "langs": [
+                "en"
+            ],
+            "malwareList": [],
+            "seqUpdate": 16172928022293
+        }
+    ],
+    "seqUpdate": 16172928022293
+}
