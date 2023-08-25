@@ -51,25 +51,17 @@ def api_add_data():
     except Exception as e:
         return Response(f"error:{str(e)}. Status: 500", 500)
 
-'''
-пока здесь ток простое return data из бд, но он работает
-вот пример json'a он офк не полный, ну и я не знаю как избавиться от _id, и нужно ли от него избавляться
-
-[{'_id': {'$oid': '64e7799da280894eac372fb8'}, 'author': 'idk', 'companyId': ['idk'], 
-'id': 'fake4f16300296d20ef9b909dc0d354fb', 'indicators': [{'dateFirstSeen': '2020-09-30T11:03:52+00:00', 
-'dateLastSeen': '2020-09-30T11:03:52+00:00', 'deleted': False, 'description': None, 'domain': 'fake-fakesop.net',
-'id': 'fakebe483bb82759fbee7038235e0f52d0'}], 'indicatorsIds': ['fakebe483bb82759fbee7038235e0f52d0'],
-'isPublished': True, 'isTailored': False, 'labels': ['ransom'], 'langs': ['en'], 
-'malwareList': ['Lockbit'], 'seqUpdate': 1617292803402},
-'''
-
 
 @app.route('/api/get', methods=['GET'])
 def api_get():
     try:
         collection = mongo.db.facct
-        data = list(collection.find())
-        return jsonify(dumps(data))
+        params = request.args.to_dict()
+        data = list(collection.find(params))
+        if data:
+            return jsonify(dumps(data))
+        else:
+            return jsonify({"Message": "No data found"})
     except Exception as e:
         return jsonify({"Error": e})
 
