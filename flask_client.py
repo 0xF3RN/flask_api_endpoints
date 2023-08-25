@@ -1,7 +1,7 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, jsonify
 from flask_pymongo import PyMongo
 from JsonParser import JSONParser
-import json
+from bson.json_util import dumps
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = "mongodb://localhost:27017/facct"
@@ -41,7 +41,6 @@ def api_add_data():
         inserted_data_list = []
         parse_data = request.json.get("items", {})
         if JSONParser(parse_data).json_validation():
-            #print(JSONParser(parse_data).print_data())
             for i in range(len(request.json["items"])):
                 inserted_data = collection.insert_one(request.json["items"][i])
                 inserted_data_list.append(inserted_data)
@@ -52,10 +51,27 @@ def api_add_data():
     except Exception as e:
         return Response(f"error:{str(e)}. Status: 500", 500)
 
+'''
+пока здесь ток простое return data из бд, но он работает
+вот пример json'a он офк не полный, ну и я не знаю как избавиться от _id, и нужно ли от него избавляться
 
-@app.route('/api/get')
+[{'_id': {'$oid': '64e7799da280894eac372fb8'}, 'author': 'idk', 'companyId': ['idk'], 
+'id': 'fake4f16300296d20ef9b909dc0d354fb', 'indicators': [{'dateFirstSeen': '2020-09-30T11:03:52+00:00', 
+'dateLastSeen': '2020-09-30T11:03:52+00:00', 'deleted': False, 'description': None, 'domain': 'fake-fakesop.net',
+'id': 'fakebe483bb82759fbee7038235e0f52d0'}], 'indicatorsIds': ['fakebe483bb82759fbee7038235e0f52d0'],
+'isPublished': True, 'isTailored': False, 'labels': ['ransom'], 'langs': ['en'], 
+'malwareList': ['Lockbit'], 'seqUpdate': 1617292803402},
+'''
+
+
+@app.route('/api/get', methods=['GET'])
 def api_get():
-    return Response("im existing")
+    try:
+        collection = mongo.db.facct
+        data = list(collection.find())
+        return jsonify(dumps(data))
+    except Exception as e:
+        return jsonify({"Error": e})
 
 
 if __name__ == '__main__':
