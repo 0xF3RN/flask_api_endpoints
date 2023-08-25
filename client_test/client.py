@@ -1,8 +1,8 @@
 import requests
 import json
 
-url_post = "http://127.0.0.1:5000/api/add"
-url_get = 'http://127.0.0.1:5000/api/get'
+url_post = "http://127.0.0.1:5000/api/v2/add/data"
+url_get = "http://127.0.0.1:5000/api/v2/get/data"
 
 
 def send_json(json_file):
@@ -25,7 +25,8 @@ def main():
     #send_json("valid_json.json")                        # adds 1 json
     #send_json("valid_json_x2.json")                     # adds 2 jsons
     #send_json("not_valid_json_no_items_field.json")     # without items field
-    #("not_valid_json_empty_fields.json")                # empty fields
+    #send_json("not_valid_json_empty_fields.json")       # empty fields
+
 
 if __name__ == "__main__":
     main()
