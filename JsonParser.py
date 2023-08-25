@@ -7,7 +7,7 @@ class JSONParser:
         print("-> parser has been initialized")
 
     def print_data(self):
-        return self.data    # for debug
+        return self.data
 
     def __del__(self):
         print("-> parser has been deleted")
