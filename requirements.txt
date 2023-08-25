@@ -1,2 +1,4 @@
-requests~=2.31.0
-flask~=2.3.3
+Flask==2.3.3
+Flask_PyMongo==2.3.0
+pymongo==4.5.0
+Requests==2.31.0
