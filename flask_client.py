@@ -35,7 +35,11 @@ def api_get():
         if data:
             return jsonify(dumps(data))
         else:
-            return jsonify({"Message": "No data found"})
+            data = list(collection.find({"indicators": {"$elemMatch": params}}))
+            if data:
+                return jsonify(dumps(data))
+            else:
+                return jsonify({"Message": "No data found"})
     except Exception as e:
         return jsonify({"Error": e})
 
