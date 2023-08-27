@@ -24,12 +24,12 @@ cd testtask_for_facct
 pip install -r requirements.txt
 ```
 
-4) Run server
+4) Run MongoDB server
+
+5) Run server
 ```bash
 python flask_server.py
 ```
-
-5) Run MongoDB server
 
 ## Usage
 
