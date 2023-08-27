@@ -1,7 +1,7 @@
 # Project Documentation: Flask Server
 ## Introduction
 
-Welcome to the documentation for my project, which includes a Flask client and a parser (extra: test client). This documentation will guide you through the installation and usage of the project components.
+Welcome to the documentation for my project, which includes a Flask sever and a parser (extra: test client). This documentation will guide you through the installation and usage of the project components.
 
 ## Installation
 
@@ -25,8 +25,9 @@ pip install -r requirements.txt
 ```
 
 4) Run MongoDB server
+   Make sure you have created facct collection
 
-5) Run server
+6) Run server
 ```bash
 python flask_server.py
 ```
