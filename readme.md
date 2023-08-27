@@ -26,7 +26,7 @@ pip install -r requirements.txt
 
 4) Run server
 ```bash
-python flask_client.py
+python flask_server.py
 ```
 
 5) Run MongoDB server
