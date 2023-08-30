@@ -58,3 +58,13 @@ def get_data():
     response = requests.get(url_get, params=params)
     print(response.json())
 ```
+or
+```python
+def get_data():
+    params = {
+        "dateFirstSeen": "2023-09-30T11:03:52+00:00",
+        "dateLastSeen": "2023-09-30T11:03:52+00:00"
+    }
+    response = requests.get(url_get, params=params)
+    print(response.json())
+```
