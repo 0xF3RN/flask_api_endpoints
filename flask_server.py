@@ -23,7 +23,7 @@ def api_add_data():
         else:
             return Response("Error: make sure you have sent JSON file with valid information. Status: 400", 400)
     except Exception as e:
-        return Response(f"Error: {str(e)}. Status: 500", 500)
+        return Response(f"Error:{str(e)}. Status: 500", 500)
 
 
 @app.route('/api/v2/get/data', methods=['GET'])
