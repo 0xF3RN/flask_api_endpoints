@@ -23,7 +23,7 @@ def api_add_data():
         else:
             return Response("Error: make sure you have sent JSON file with valid information. Status: 400", 400)
     except Exception as e:
-        return Response(f"error:{str(e)}. Status: 500", 500)
+        return Response(f"Error: {str(e)}. Status: 500", 500)
 
 
 @app.route('/api/v2/get/data', methods=['GET'])
@@ -31,7 +31,7 @@ def api_get():
     try:
         collection = mongo.db.facct
         params = request.args.to_dict()
-        data = list(collection.find(params))
+        data = list(collection.find())
         if data:
             return jsonify(dumps(data))
         else:
@@ -45,4 +45,4 @@ def api_get():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
