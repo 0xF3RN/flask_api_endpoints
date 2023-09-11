@@ -10,7 +10,7 @@ To get started with the project, follow these installation steps:
 1) Clone the repository:
 
 ```bash
-git clone https://github.com/cutecei/testtask_for_facct.git
+git clone https://github.com/cutecei/flask_api_endpoints.git
 ```
 
 2) Navigate to the project directory:
