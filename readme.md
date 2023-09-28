@@ -16,7 +16,7 @@ git clone https://github.com/cutecei/flask_api_endpoints.git
 2) Navigate to the project directory:
 
 ```bash
-cd testtask_for_facct
+cd flask_api_endpoints
 ```
 
 3) Install the project dependencies:
