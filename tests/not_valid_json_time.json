@@ -4,19 +4,19 @@
         {
             "author": "idk",
             "companyId": ["idk"],
-            "id": "fake4f16300296d20ef9b909dc0d354fb",
+            "id": "fade4f16300296d20ef9b909dc0d354d",
             "indicators": [
                 {
-                    "dateFirstSeen": "2020-09-30T11:03:52+00:00",
+                    "dateFirstSeen": "-2020-09-30T11:03:52+00:00",
                     "dateLastSeen": "2020-09-30T11:03:52+00:00",
                     "deleted": false,
                     "description": null,
                     "domain": "fake-fakesop.net",
-                    "id": "fakebe483bb82759fbee7038235e0f52d0"
+                    "id": "fade4f16300296d20ef9b909dc0d354d"
                 }
             ],
             "indicatorsIds": [
-                "fakebe483bb82759fbee7038235e0f52d0"
+                "fadebe483bb82759fbee7038235e0f52d0"
             ],
             "isPublished": true,
             "isTailored": false,

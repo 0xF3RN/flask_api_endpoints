@@ -4,7 +4,7 @@
         {
             "author": "idk",
             "companyId": ["idk"],
-            "id": "fake4f16300296d20ef9b909dc0d354fb",
+            "id": "aade4f16300296d20ef9b909dc0d354d",
             "indicators": [
                 {
                     "dateFirstSeen": "2020-09-30T11:03:52+00:00",
@@ -12,11 +12,11 @@
                     "deleted": false,
                     "description": null,
                     "domain": "fake-fakesop.net",
-                    "id": "fakebe483bb82759fbee7038235e0f52d0"
+                    "id": "aade4f16300296d20ef9b909dc0d354d"
                 }
             ],
             "indicatorsIds": [
-                "fakebe483bb82759fbee7038235e0f52d0"
+                "aade4f16300296d20ef9b909dc0d354d"
             ],
             "isPublished": true,
             "isTailored": false,
@@ -30,7 +30,7 @@
         {
             "author": "idk2",
             "companyId": ["idk2"],
-            "id": "fake4f16300296d20ef9b909dc0d354fb",
+            "id": "bade4f16300296d20ef9b909dc0d354d",
             "indicators": [
                 {
                     "dateFirstSeen": "2020-09-30T11:03:52+00:00",
@@ -38,11 +38,11 @@
                     "deleted": false,
                     "description": null,
                     "domain": "fake-fakesop.net",
-                    "id": "fakebe483bb82759fbee7038235e0f52d0"
+                    "id":  "bade4f16300296d20ef9b909dc0d354d"
                 }
             ],
             "indicatorsIds": [
-                "fakebe483bb82759fbee7038235e0f52d0"
+                "bade4f16300296d20ef9b909dc0d354d"
             ],
             "isPublished": true,
             "isTailored": false,

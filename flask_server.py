@@ -31,7 +31,7 @@ def api_get():
     try:
         collection = mongo.db.facct
         params = request.args.to_dict()
-        data = list(collection.find())
+        data = list(collection.find(params))
         if data:
             return jsonify(dumps(data))
         else:
